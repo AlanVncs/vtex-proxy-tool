@@ -1,0 +1,29 @@
+{
+	"name": "@alanvncs/vtex-proxy-tool",
+	"exports": "./src/main.ts",
+	"version": "0.0.1",
+	"tasks": {
+		"dev": "deno run -A --env src/main.ts run",
+		"check": "deno check src/main.ts",
+		"cache": "rm deno.lock; deno cache -r src/main.ts"
+	},
+	"imports": {
+		"$src/": "./src/",
+		"@std/": "https://deno.land/std@0.224.0/",
+		"@esbuild/": "https://deno.land/x/esbuild@v0.23.0/",
+		"@zod/": "https://deno.land/x/zod@v3.23.8/",
+		"@commander/": "https://deno.land/x/cmd@v1.2.0/",
+		"@inquirer": "npm:inquirer",
+		"@sass": "npm:sass",
+		"@postcss": "npm:postcss",
+		"@autoprefixer": "npm:autoprefixer",
+		"@cssnano": "npm:cssnano"
+	},
+	"fmt": {
+		"indentWidth": 4,
+		"lineWidth": 140,
+		"semiColons": false,
+		"singleQuote": true,
+		"useTabs": true
+	}
+}
